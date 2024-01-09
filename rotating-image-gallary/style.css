@@ -1,0 +1,67 @@
+body{
+    /* alt vises i midten horisontalt */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    background-color: rgba(0, 0, 0, 0.87);
+ 
+    flex-direction: column;
+   
+    /* alt vises i midten vertikal */
+ 
+    height: 100vh;
+    align-items: center;
+}
+ 
+.image-container{
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    position: relative;
+}
+ 
+.image-container span {
+    transform:rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    
+    top: 0;
+    left: 0;
+    width: 80%;
+    position: absolute;
+}
+
+.image-container span img{
+    
+    top: 0;
+    left: 0;
+    width: 80%;
+    position: absolute;
+}
+
+.btn-container{
+    width: 80%;
+    position: relative;
+}
+
+.btn{
+    background-color: darkorchid;
+    color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.btn:hover{
+    filter: brightness(1.5);
+}
+
+#Prev{
+    left: 20%;
+}
+
+#Next{
+    right: 20%;
+}
